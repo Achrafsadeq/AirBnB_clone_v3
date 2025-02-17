@@ -93,7 +93,8 @@ class HBNBCommand(cmd.Cmd):
                 if "=" in param:
                     key, value = param.split("=", 1)
                     if value.startswith('"') and value.endswith('"'):
-                        value = value[1:-1].replace("_", " ").replace('\\"', '"')
+                        value = value[1:-1]
+                        .replace("_", " ").replace('\\"', '"')
                     elif "." in value:
                         try:
                             value = float(value)
